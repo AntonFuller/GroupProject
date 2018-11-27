@@ -1,8 +1,6 @@
 import Foundation
 
-class ScanViewController: UIViewController{
-    
-   
-    
-    
+class SwiftViewController: UIViewController {
+
 }
+
