@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    
+    <wpt lat="50.7259162"  lon="-1.8651469"
+        lat="50.7271319"  lon="-1.8659194"
+        lat="50.724373"  lon"-1.8775108"
+        lat="50.7338389"  lon"-1.8768507">
+        <name>Tesco</name>
+        //tesco locations in lat and long.
+    </wpt>
+    
+    
+    <wpt lat="50.7268498"  lon="-1.8408748"
+        lat="50.7236081"  lon="-1.8310836"
+        lat="50.7269694"  lon="-1.8271845">
+        <name>Sainsburrys</name>
+        //Sainsburrys
+    </wpt>
+    
+    <wpt lat="50.7527593"  lon="-1.8401066"
+        lat="50.7401029"  lon="-1.8830739"
+        lat="50.7222428"  lon="-2.0097862">
+        <name>Asda</name>
+        //Asda
+    </wpt>
+    
+    <wpt lat="50.7268733"  lon="-1.9745883"
+        lat="50.7382727"  lon="-1.9026824">
+        <name>Waitrose</name>
+        //Waitrose
+    </wpt>
+
+    <wpt lat="50.7213915"  lon="-1.869695"
+        lat="50.7238112"  lon="-1.8675248"
+        lat="50.7241309"  lon="-1.8713235"
+        lat="50.732797"  lon="-1.8599855"
+        lat="50.7254956"  lon="-1.8930177">
+        <name>Co-op</name>
+        //Co-op
+    </wpt>
+</gpx>
+
+
+
