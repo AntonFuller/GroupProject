@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2674E1A721AD4FE900C4DA40 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674E1A621AD4FE900C4DA40 /* ScanViewController.swift */; };
 		86547E9221A4187C00469260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86547E9121A4187C00469260 /* AppDelegate.swift */; };
 		86547E9421A4187C00469260 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86547E9321A4187C00469260 /* ViewController.swift */; };
 		86547E9721A4187C00469260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86547E9521A4187C00469260 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2674E1A621AD4FE900C4DA40 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		86547E8E21A4187C00469260 /* GroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86547E9121A4187C00469260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86547E9321A4187C00469260 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				86547E9121A4187C00469260 /* AppDelegate.swift */,
 				86547E9321A4187C00469260 /* ViewController.swift */,
+				2674E1A621AD4FE900C4DA40 /* ScanViewController.swift */,
 				86547E9521A4187C00469260 /* Main.storyboard */,
 				AF3A552F21AD496000473269 /* MapViewController.swift */,
 				86547E9821A4187C00469260 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86547E9421A4187C00469260 /* ViewController.swift in Sources */,
+				2674E1A721AD4FE900C4DA40 /* ScanViewController.swift in Sources */,
 				AF3A553021AD496000473269 /* MapViewController.swift in Sources */,
 				86547E9221A4187C00469260 /* AppDelegate.swift in Sources */,
 			);
