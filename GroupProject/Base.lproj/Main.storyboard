@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-8Q-aIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
+            <point key="canvasLocation" x="1222" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-
+            <point key="canvasLocation" x="556" y="134"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="suJ-BI-haa">
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQQ-d2-q1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
+            <point key="canvasLocation" x="2542" y="134"/>
         </scene>
         <!--Alcohol Data Base-->
         <scene sceneID="dXk-3O-ABE">
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkW-pI-sz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
+            <point key="canvasLocation" x="1881" y="134"/>
         </scene>
     </scenes>
 </document>
