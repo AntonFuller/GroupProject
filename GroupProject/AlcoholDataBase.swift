@@ -17,7 +17,7 @@ class AlcoholDataBase: UIViewController {
 //        layer.stopPoint = CGPoint (x: 1, y: 1)
 //        view.layer.addSublayer(layer)
         
-    
+     
     
     
     
