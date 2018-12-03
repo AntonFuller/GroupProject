@@ -1,11 +1,21 @@
 import Foundation
 import UIKit
+import Firebase
 
 
 class AlcoholDataBase: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ref = Firestore.firestore().collection("drinks")
+        ref.getDocuments { snapshot, error in
+            guard error == nil else { return }
+            for document in snapshot!.documents {
+                print("\(document.documentID) => \(document.data())")
+            }
+            
+        }
     
         //changing the colour of the background to two gradients
         
