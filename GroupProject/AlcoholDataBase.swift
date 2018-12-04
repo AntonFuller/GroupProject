@@ -17,18 +17,7 @@ class AlcoholDataBase: UIViewController {
             }
         }
         
-        _ = Firestore.firestore().collection("Smirnoff vodka 1lr")
-        ref.getDocuments { snapshop, error in
-            guard error == nil else { return }
-            for document in snapshop!.documents {
-                print("\(document.documentID) => \(document.data())")
-            }
-        }
-        
-        
-        
-        
-        
+       
         
         
         
