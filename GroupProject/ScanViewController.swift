@@ -13,9 +13,20 @@ class SwiftViewController: UIViewController {
             view.backgroundColor = UIColor.black
             captureSession = AVCaptureSession()
             
-            guard let ideoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+            guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
             let videoInput: AVCaptureDeviceInput
             
+            do {
+                videoInput = try AVCaptureDevice(device: videoCaptureDevice)
+            } catch {
+                return
+            }
+            if (captureSession.canAddInput(videoInput)) {
+                captureSession.AddInput(videoInput)
+            } else {
+                failed()
+                return
+            }
         }
     }
     
