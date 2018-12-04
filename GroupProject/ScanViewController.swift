@@ -3,8 +3,15 @@ import AVFoundation
 
 class SwiftViewController: UIViewController {
     class BarcodeReaderViewController: UIController, AVCaptureMetadataOutputObjectsDelegate {
-        var session: AVCaptureSession
+        var captureSession: AVCaptureSession!
         var previewLayer: AVCaptureVideoPreviewLayer!
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            
+        }
     }
     
     
