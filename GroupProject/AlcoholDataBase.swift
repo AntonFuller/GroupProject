@@ -8,15 +8,39 @@ class AlcoholDataBase: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ref = Firestore.firestore().collection("drinks")
-        ref.getDocuments { snapshot, error in
+    
+        let ref = Firestore.firestore().collection("Budwieser 4x400ml")
+        ref.getDocuments { snapshop, error in
             guard error == nil else { return }
-            for document in snapshot!.documents {
+            for document in snapshop!.documents {
                 print("\(document.documentID) => \(document.data())")
             }
-            
         }
-    
+        
+        _ = Firestore.firestore().collection("Smirnoff vodka 1lr")
+        ref.getDocuments { snapshop, error in
+            guard error == nil else { return }
+            for document in snapshop!.documents {
+                print("\(document.documentID) => \(document.data())")
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //changing the colour of the background to two gradients
         
 //    let layer = CAGradientLayer()
