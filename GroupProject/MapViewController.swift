@@ -8,4 +8,17 @@ class MapViewController: UIViewController{
     )
     
     
+    
+    
 }
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_manager: CLLocationManager, didupdatelocations locations: [CLLocation]){
+        print(locations.last!)
+        
+        
+    }
+}
+    
+
