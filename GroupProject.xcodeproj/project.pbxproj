@@ -17,6 +17,8 @@
 		86547E9C21A4187C00469260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86547E9A21A4187C00469260 /* LaunchScreen.storyboard */; };
 		86A087BE21B57750006E4774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A087BD21B57750006E4774 /* GoogleService-Info.plist */; };
 		AF3A553021AD496000473269 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A552F21AD496000473269 /* MapViewController.swift */; };
+		AFC6977921B68FE400D1E513 /* ShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6977821B68FE400D1E513 /* ShopManager.swift */; };
+		AFC6977B21B6910C00D1E513 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6977A21B6910C00D1E513 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		86A087BD21B57750006E4774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF3A552F21AD496000473269 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AF3A553121AD64FA00473269 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		AFC6977821B68FE400D1E513 /* ShopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopManager.swift; sourceTree = "<group>"; };
+		AFC6977A21B6910C00D1E513 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		FE0F00303A98E16BBA32A05A /* Pods-GroupProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,8 @@
 				AF3A553121AD64FA00473269 /* Location.gpx */,
 				864DFB8421AD52F100D7FB44 /* AlcoholDataBase.swift */,
 				AF3A552F21AD496000473269 /* MapViewController.swift */,
+				AFC6977821B68FE400D1E513 /* ShopManager.swift */,
+				AFC6977A21B6910C00D1E513 /* Shop.swift */,
 				86547E9821A4187C00469260 /* Assets.xcassets */,
 				86547E9A21A4187C00469260 /* LaunchScreen.storyboard */,
 				86547E9D21A4187C00469260 /* Info.plist */,
@@ -262,7 +268,9 @@
 				2674E1A721AD4FE900C4DA40 /* ScanViewController.swift in Sources */,
 				AF3A553021AD496000473269 /* MapViewController.swift in Sources */,
 				864DFB8521AD52F100D7FB44 /* AlcoholDataBase.swift in Sources */,
+				AFC6977B21B6910C00D1E513 /* Shop.swift in Sources */,
 				86547E9221A4187C00469260 /* AppDelegate.swift in Sources */,
+				AFC6977921B68FE400D1E513 /* ShopManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
