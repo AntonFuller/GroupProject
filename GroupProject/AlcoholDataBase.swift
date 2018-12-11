@@ -21,7 +21,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-    var myList:[string] = []
+    var myList:[String] = []
     
     func tableView( tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myList.count
@@ -41,12 +41,12 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         let ref = Firestore.firestore().collection("Budwieser 4x400ml")
-        ref.getDocuments { snapshop, error in
+        ref.getDocuments { snapshot, error in
             guard error == nil else { return }
-            for document in snapshop!.documents {
+            for document in snapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
                 
-                if let item = snapshop.value as? string {
+                if let item = snapshot.value as? String {
                     self.myList.append(item)
                     self.myTableView.reloadData()
                 }
