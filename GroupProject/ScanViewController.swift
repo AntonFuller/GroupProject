@@ -33,6 +33,32 @@ class CameraView: UIView {
                     failed()
                     return
                 }
+                
+                let metadataOutput = AVCaptureMetadataOutput()
+                
+                if (captureSession.canAddOutput(metadataOutput)) {
+                    captureSession.addOutput(metadataOutput)
+                    
+                    metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+                    metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417]
+                } else {
+                    failed()
+                    return
+                }
+                
+                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                previewLayer.frame = view.layer.bounds
+                previewLayer.videoGravity = .resizeAspectFill
+                view.layer.addSublayer(previewLayer)
+                
+                captureSession.startRunning()
+                
+            }
+                
+                
+                
+                
+                
             }
         }
         
