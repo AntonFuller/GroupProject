@@ -28,7 +28,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-    func tableView( tableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    private func tableView( _: tableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = myList[indexPath.row]
         return cell
@@ -49,7 +49,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
                 if let item = snapshot.value as? String {
                     self.myList.append(item)
                     self.myTableView.reloadData()
-                }
+                
         
             }
             
