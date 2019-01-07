@@ -5,11 +5,14 @@ import CoreLocation
 class MapViewController: UIViewController{
     
     @IBOutlet weak var MapView: MKMapView!
+    
     let locationManager = CLLocationManager()
-    let tescoCoordinate = CLLocationCoordinate2D(latitude: )
+    let shopManger = ShopManager()
     
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        MapView.addAnnotations(shopManger.shops)
+    }
     
 }
 
