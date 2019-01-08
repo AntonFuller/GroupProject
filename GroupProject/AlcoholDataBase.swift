@@ -28,12 +28,6 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-    private func tableView( _: tableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = myList[indexPath.row]
-        return cell
-    }
-    
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -46,14 +40,17 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
             for document in snapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
                 
-                if let item = snapshot.value as? String {
-                    self.myList.append(item)
-                    self.myTableView.reloadData()
-                
-        
+//                if let item = snapshot.value as? String {
+//                    self.myList.append(item)
+//                    self.myTableView.reloadData()
+//                
+//        
+//                }
             }
             
         }
+    }
+}
         
        
         
@@ -81,9 +78,4 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
      
     
     
-    
-    
-    
-    
-   }
-}
+

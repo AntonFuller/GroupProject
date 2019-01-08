@@ -7,13 +7,13 @@ class ShopManager {
     
     init() {
         
-        let tescoCoordinate = CLLocationCoordinate2D(latitude: 50.7259162,  longitude: -1.8651469)
+        let tescoCoordinate = CLLocationCoordinate2D(latitude: 50.7372384,  longitude: -1.9126918)
         let tesco = Shop(coordinate: tescoCoordinate, title: "Tesco")
         shops.append(tesco)
         
     
 
-        let sainsburrysCoordinate = CLLocationCoordinate2D(latitude: 50.7268498,  longitude: -1.8408748)
+        let sainsburrysCoordinate = CLLocationCoordinate2D(latitude: 50.7371402,  longitude: -1.9126918)
         let sainsburrys = Shop(coordinate: sainsburrysCoordinate, title: "Sainsburrys")
         shops.append(sainsburrys)
         
@@ -21,17 +21,18 @@ class ShopManager {
         let asda = Shop(coordinate: asdaCoordinate, title: "Asda")
         shops.append(asda)
         
-        let waitroseCoordinate = CLLocationCoordinate2D(latitude: 50.7268733 ,  longitude: -1.9745883)
-        let waitrose = Shop(coordinate: waitroseCoordinate, title: "Asda")
+        let waitroseCoordinate = CLLocationCoordinate2D(latitude: 50.7374208,  longitude: -2.0177527)
+        let waitrose = Shop(coordinate: waitroseCoordinate, title: "Waitrose")
         shops.append(waitrose)
         
         let coopCoordinate = CLLocationCoordinate2D(latitude: 50.7213915 ,  longitude: -1.869695)
-        let coop = Shop(coordinate: coopCoordinate, title: "Asda")
+        let coop = Shop(coordinate: coopCoordinate, title: "Co-op")
         shops.append(coop)
         
         
     }
 }
+
 
 
 
