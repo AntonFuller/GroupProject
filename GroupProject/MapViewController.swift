@@ -5,7 +5,7 @@ class MapViewController: UIViewController{
     
     @IBOutlet weak var MapView: MKMapView!
     let locationManager = CLLocationManager()
-    let tescoCoordinate = CLLocationCoordinate2D(latitude: )
+   
     
     
     
