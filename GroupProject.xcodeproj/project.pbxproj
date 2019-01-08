@@ -16,6 +16,7 @@
 		86547E9921A4187C00469260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86547E9821A4187C00469260 /* Assets.xcassets */; };
 		86547E9C21A4187C00469260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86547E9A21A4187C00469260 /* LaunchScreen.storyboard */; };
 		86A087BE21B57750006E4774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A087BD21B57750006E4774 /* GoogleService-Info.plist */; };
+		86A0F35821E4B8BD0089DC43 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0F35721E4B8BD0089DC43 /* Drink.swift */; };
 		AF3A553021AD496000473269 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A552F21AD496000473269 /* MapViewController.swift */; };
 		AFC6977921B68FE400D1E513 /* ShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6977821B68FE400D1E513 /* ShopManager.swift */; };
 		AFC6977B21B6910C00D1E513 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6977A21B6910C00D1E513 /* Shop.swift */; };
@@ -34,6 +35,7 @@
 		86547E9B21A4187C00469260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86547E9D21A4187C00469260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A087BD21B57750006E4774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86A0F35721E4B8BD0089DC43 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		AF3A552F21AD496000473269 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AF3A553121AD64FA00473269 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		AFC6977821B68FE400D1E513 /* ShopManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopManager.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				AF3A552F21AD496000473269 /* MapViewController.swift */,
 				AFC6977821B68FE400D1E513 /* ShopManager.swift */,
 				AFC6977A21B6910C00D1E513 /* Shop.swift */,
+				86A0F35721E4B8BD0089DC43 /* Drink.swift */,
 				86547E9821A4187C00469260 /* Assets.xcassets */,
 				86547E9A21A4187C00469260 /* LaunchScreen.storyboard */,
 				86547E9D21A4187C00469260 /* Info.plist */,
@@ -271,6 +274,7 @@
 				AFC6977B21B6910C00D1E513 /* Shop.swift in Sources */,
 				86547E9221A4187C00469260 /* AppDelegate.swift in Sources */,
 				AFC6977921B68FE400D1E513 /* ShopManager.swift in Sources */,
+				86A0F35821E4B8BD0089DC43 /* Drink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
