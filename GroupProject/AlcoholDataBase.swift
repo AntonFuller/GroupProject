@@ -9,7 +9,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var drink: Drink!
     
-    let list = ["Budwieser 4x400ml"]
+    let list = ["Asda"]
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(list.count)
     }
@@ -36,7 +36,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ref = Firestore.firestore().collection("drinks").document("038678561125")
+        let ref = Firestore.firestore().collection("drinks").document("5410316951340")
         ref.getDocument { document, error in
             guard let document = document else { return }
             self.drink = Drink(doc: document)
