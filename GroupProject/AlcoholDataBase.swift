@@ -33,6 +33,8 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var myTableView: UITableView!
     
+    //Pulls information from the firebase 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
