@@ -33,16 +33,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupAlcohol.jpg" highlightedImage="groupAlcohol.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="heN-NE-Yhj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi6-yb-MhP">
-                                <rect key="frame" x="0.0" y="165" width="375" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="0.88810775203023185" green="0.94546042339194769" blue="0.95523184537887573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsV-kI-1Gc">
-                                <rect key="frame" x="0.0" y="373" width="375" height="41"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start scanning"/>
+                                <state key="normal" title="Start scanning">
+                                    <color key="titleColor" red="1" green="0.14130163446379107" blue="0.0081229222233308862" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="i0m-0q-Eav" kind="show" id="a9P-sh-mdN"/>
                                 </connections>
@@ -50,12 +55,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zsV-kI-1Gc" firstAttribute="leading" secondItem="Hi6-yb-MhP" secondAttribute="leading" id="38a-1o-EpY"/>
-                            <constraint firstItem="Hi6-yb-MhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D3r-bR-n6l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zsV-kI-1Gc" secondAttribute="bottom" constant="253" id="DEf-2b-FGq"/>
-                            <constraint firstAttribute="trailing" secondItem="Hi6-yb-MhP" secondAttribute="trailing" id="NwB-Xv-x14"/>
-                            <constraint firstItem="Hi6-yb-MhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="V8R-Hq-2pw"/>
-                            <constraint firstItem="zsV-kI-1Gc" firstAttribute="trailing" secondItem="Hi6-yb-MhP" secondAttribute="trailing" id="maY-cm-TfB"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CCF-hV-Jty"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="zsV-kI-1Gc" secondAttribute="leading" id="UwZ-OP-5sR"/>
+                            <constraint firstItem="Hi6-yb-MhP" firstAttribute="leading" secondItem="zsV-kI-1Gc" secondAttribute="leading" id="XU5-7u-EVC"/>
+                            <constraint firstItem="Hi6-yb-MhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="bvG-Xy-zu0"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="trailing" secondItem="zsV-kI-1Gc" secondAttribute="trailing" id="dAR-Jy-4my"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gco-jo-F6m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zsV-kI-1Gc" secondAttribute="bottom" constant="486" id="hhH-nt-IFg"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r1u-ae-t5w"/>
+                            <constraint firstItem="Hi6-yb-MhP" firstAttribute="trailing" secondItem="zsV-kI-1Gc" secondAttribute="trailing" id="vV1-KX-Vai"/>
+                            <constraint firstAttribute="trailing" secondItem="heN-NE-Yhj" secondAttribute="trailing" id="yIJ-m9-gQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -133,4 +142,7 @@
             <point key="canvasLocation" x="1880.8" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="groupAlcohol.jpg" width="640" height="960"/>
+    </resources>
 </document>
