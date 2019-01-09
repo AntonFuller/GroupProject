@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jqo-MM-1dX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,9 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupAlcohol.jpg" highlightedImage="groupAlcohol.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="heN-NE-Yhj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi6-yb-MhP">
                                 <rect key="frame" x="0.0" y="56" width="375" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
@@ -52,19 +49,22 @@
                                     <segue destination="i0m-0q-Eav" kind="show" id="a9P-sh-mdN"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupAlcohol.jpg" highlightedImage="groupAlcohol.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="heN-NE-Yhj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="heN-NE-Yhj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CCF-hV-Jty"/>
-                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="zsV-kI-1Gc" secondAttribute="leading" id="UwZ-OP-5sR"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="trailing" secondItem="Hi6-yb-MhP" secondAttribute="trailing" id="2Ab-Gh-UjL"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="zsV-kI-1Gc" secondAttribute="leading" id="Pj5-ln-IuM"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RN4-Nj-Pjw"/>
+                            <constraint firstAttribute="trailing" secondItem="heN-NE-Yhj" secondAttribute="trailing" id="UGd-KX-kx8"/>
                             <constraint firstItem="Hi6-yb-MhP" firstAttribute="leading" secondItem="zsV-kI-1Gc" secondAttribute="leading" id="XU5-7u-EVC"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YYz-UW-BNV"/>
+                            <constraint firstItem="heN-NE-Yhj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YhG-Hg-jqW"/>
                             <constraint firstItem="Hi6-yb-MhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="bvG-Xy-zu0"/>
-                            <constraint firstItem="heN-NE-Yhj" firstAttribute="trailing" secondItem="zsV-kI-1Gc" secondAttribute="trailing" id="dAR-Jy-4my"/>
-                            <constraint firstItem="heN-NE-Yhj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gco-jo-F6m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zsV-kI-1Gc" secondAttribute="bottom" constant="486" id="hhH-nt-IFg"/>
-                            <constraint firstItem="heN-NE-Yhj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r1u-ae-t5w"/>
                             <constraint firstItem="Hi6-yb-MhP" firstAttribute="trailing" secondItem="zsV-kI-1Gc" secondAttribute="trailing" id="vV1-KX-Vai"/>
-                            <constraint firstAttribute="trailing" secondItem="heN-NE-Yhj" secondAttribute="trailing" id="yIJ-m9-gQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
