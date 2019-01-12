@@ -4,32 +4,40 @@ import Firebase
 
 
 class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     
     //setting up the table
     
     var drink: Drink!
-    
-    let list = ["Asda", "tesco", "sainsburry", "co op", "waitrose"]
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(list.count)
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = list[indexPath.row]
-        
-        return(cell)
-        
-    }
-    
-    var myList:[String] = []
-    
-    func tableView( tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myList.count
-        
-    }
-    
+//
+//    let list = ["Asda", "tesco", "sainsburry", "co op", "waitrose"]
+//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return(list.count)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+//        cell.textLabel?.text = list[indexPath.row]
+//
+//        return(cell)
+//
+//    }
+//
+//    var myList:[String] = []
+//
+//    func tableView( tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return myList.count
+//
+//    }
+//
     
     @IBOutlet weak var myTableView: UITableView!
     
