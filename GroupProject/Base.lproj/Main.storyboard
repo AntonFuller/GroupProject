@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-8Q-aIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="134"/>
+            <point key="canvasLocation" x="1221.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="2688.8000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Alcohol Data Base-->
+        <!--Title-->
         <scene sceneID="dXk-3O-ABE">
             <objects>
                 <viewController id="Jqo-MM-1dX" customClass="AlcoholDataBase" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,6 +145,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QQw-Dc-vD5"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="AG2-Hz-Sov"/>
                     <connections>
                         <outlet property="myTableView" destination="wod-Pm-b0n" id="Urg-jE-6y9"/>
                     </connections>
