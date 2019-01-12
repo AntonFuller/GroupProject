@@ -9,7 +9,7 @@ class AlcoholDataBase: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var drink: Drink!
     
-    let list = ["Asda"]
+    let list = ["Asda", "tesco", "sainsburry", "co op", "waitrose"]
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(list.count)
     }
