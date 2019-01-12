@@ -13,8 +13,14 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     var captureSession = AVCaptureSession()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         
         setupCamera()
     }
@@ -85,4 +91,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             }
         }
     }
+
+        
 }
