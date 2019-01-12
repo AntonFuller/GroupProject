@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jqo-MM-1dX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,14 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="gSH-Go-KT3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHl-EO-h0x">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrj-1s-CXc">
+                                        <rect key="frame" x="107" y="308" width="128" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Is This &quot;Smirnoff&quot;?"/>
+                                        <connections>
+                                            <segue destination="Jqo-MM-1dX" kind="show" id="Stf-ow-Cgp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NHl-EO-h0x" firstAttribute="leading" secondItem="gSH-Go-KT3" secondAttribute="leadingMargin" id="17j-SI-Pin"/>
+                            <constraint firstItem="NHl-EO-h0x" firstAttribute="top" secondItem="EPY-NG-f5S" secondAttribute="top" id="PW8-QA-QdG"/>
+                            <constraint firstItem="NHl-EO-h0x" firstAttribute="trailing" secondItem="gSH-Go-KT3" secondAttribute="trailingMargin" id="iKo-Y7-wGT"/>
+                            <constraint firstItem="NHl-EO-h0x" firstAttribute="bottom" secondItem="EPY-NG-f5S" secondAttribute="bottom" id="kSO-rC-S0J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EPY-NG-f5S"/>
                     </view>
                     <navigationItem key="navigationItem" id="9tU-Mg-Er2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-8Q-aIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="134"/>
+            <point key="canvasLocation" x="1221.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -114,7 +136,7 @@
             </objects>
             <point key="canvasLocation" x="2688.8000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Alcohol Data Base-->
+        <!--Title-->
         <scene sceneID="dXk-3O-ABE">
             <objects>
                 <viewController id="Jqo-MM-1dX" customClass="AlcoholDataBase" customModule="GroupProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,10 +163,18 @@
                                     <outlet property="delegate" destination="Jqo-MM-1dX" id="d2n-Eo-6I5"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smirnof Vodka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-ZZ-xeu">
+                                <rect key="frame" x="0.0" y="44" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QQw-Dc-vD5"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="AG2-Hz-Sov"/>
                     <connections>
                         <outlet property="myTableView" destination="wod-Pm-b0n" id="Urg-jE-6y9"/>
                     </connections>

@@ -6,9 +6,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        dismiss(animated: true, completion: nil)
+        //this helps to stop the other apps running in the background.
     }
-
 
 }
 
