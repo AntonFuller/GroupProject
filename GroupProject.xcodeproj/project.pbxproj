@@ -425,12 +425,13 @@
 			baseConfigurationReference = FE0F00303A98E16BBA32A05A /* Pods-GroupProject.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A9QWFJG7K;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = New.GroupProject;
+				PRODUCT_BUNDLE_IDENTIFIER = Scanner.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,12 +443,13 @@
 			baseConfigurationReference = 505A5186694E0048A52CC3F3 /* Pods-GroupProject.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A9QWFJG7K;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = New.GroupProject;
+				PRODUCT_BUNDLE_IDENTIFIER = Scanner.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

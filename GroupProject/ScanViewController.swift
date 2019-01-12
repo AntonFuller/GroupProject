@@ -1,115 +1,88 @@
 import UIKit
 import AVFoundation
 
-class CameraView: UIView {
-//    override class var layerClass: AnyClass {
-//        get {
-//            return AVCaptureVideoPreviewLayer.self
-//        }
-//    }
-//    class SwiftViewController: UIViewController {
-//        class BarcodeReaderViewController: UIController, AVCaptureMetadataOutputObjectsDelegate {
-//            func isEqual(_ object: Any?) -> Bool {
-//                <#code#>
-//            }
-//            
-//            var hash: Int
-//            
-//            var superclass: AnyClass?
-//            
-//            func `self`() -> Self {
-//                <#code#>
-//            }
-//            
-//            func perform(_ aSelector: Selector!) -> Unmanaged<AnyObject>! {
-//                <#code#>
-//            }
-//            
-//            func perform(_ aSelector: Selector!, with object: Any!) -> Unmanaged<AnyObject>! {
-//                <#code#>
-//            }
-//            
-//            func perform(_ aSelector: Selector!, with object1: Any!, with object2: Any!) -> Unmanaged<AnyObject>! {
-//                <#code#>
-//            }
-//            
-//            func isProxy() -> Bool {
-//                <#code#>
-//            }
-//            
-//            func isKind(of aClass: AnyClass) -> Bool {
-//                <#code#>
-//            }
-//            
-//            func isMember(of aClass: AnyClass) -> Bool {
-//                <#code#>
-//            }
-//            
-//            func conforms(to aProtocol: Protocol) -> Bool {
-//                <#code#>
-//            }
-//            
-//            func responds(to aSelector: Selector!) -> Bool {
-//                <#code#>
-//            }
-//            
-//            var description: String
-//            
-//            var captureSession: AVCaptureSession!
-//            var previewLayer: AVCaptureVideoPreviewLayer!
-//            
-//            
-//            override func viewDidLoad() {
-//                super.viewDidLoad()
-//                
-//                view.backgroundColor = UIColor.black
-//                captureSession = AVCaptureSession()
-//                
-//                guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
-//                let videoInput: AVCaptureDeviceInput
-//                
-//                do {
-//                    videoInput = try AVCaptureDevice(device: videoCaptureDevice)
-//                } catch {
-//                    return
-//                }
-//                if (captureSession.canAddInput(videoInput)) {
-//                    captureSession.AddInput(videoInput)
-//                } else {
-//                    failed()
-//                    return
-//                }
-//                
-//                let metadataOutput = AVCaptureMetadataOutput()
-//                
-//                if (captureSession.canAddOutput(metadataOutput)) {
-//                    captureSession.addOutput(metadataOutput)
-//                    
-//                    metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//                    metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417]
-//                } else {
-//                    failed()
-//                    return
-//                }
-//                
-//                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-//                previewLayer.frame = view.layer.bounds
-//                previewLayer.videoGravity = .resizeAspectFill
-//                view.layer.addSublayer(previewLayer)
-//                
-//                captureSession.startRunning()
-//                
-//            }
-//                
-//                
-//                
-//                
-//                
-//            }
-//        }
-//        
-//        
-//        
-//        
-    }
+protocol BarcodeDelegate: class {
+    func barcodeRead(barcode: String)
+}
 
+class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    weak var delegate: BarcodeDelegate?
+    
+    var output = AVCaptureMetadataOutput()
+    var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    var captureSession = AVCaptureSession()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupCamera()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.global(qos: .background).async {
+            if !self.captureSession.isRunning {
+                self.captureSession.startRunning()
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        DispatchQueue.global(qos: .background).async {
+            if self.captureSession.isRunning {
+                self.captureSession.stopRunning()
+            }
+        }
+    }
+    
+    fileprivate func setupCamera() {
+        guard let device = AVCaptureDevice.default(for: .video),
+            let input = try? AVCaptureDeviceInput(device: device) else {
+                return
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            if self.captureSession.canAddInput(input) {
+                self.captureSession.addInput(input)
+            }
+            
+            let metadataOutput = AVCaptureMetadataOutput()
+            
+            if self.captureSession.canAddOutput(metadataOutput) {
+                self.captureSession.addOutput(metadataOutput)
+                
+                metadataOutput.setMetadataObjectsDelegate(self, queue: .global(qos: .background))
+                
+                if Set([.qr, .ean13]).isSubset(of: metadataOutput.availableMetadataObjectTypes) {
+                    metadataOutput.metadataObjectTypes = [.qr, .ean13]
+                }
+            } else {
+                print("Could not add metadata output")
+            }
+            
+            self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+            self.previewLayer.videoGravity = .resizeAspectFill
+            
+            DispatchQueue.main.async {
+                self.previewLayer.frame = self.view.bounds
+                self.view.layer.addSublayer(self.previewLayer)
+            }
+        }
+    }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        // This is the delegate's method that is called when a code is read
+        for metadata in metadataObjects {
+            if let readableObject = metadata as? AVMetadataMachineReadableCodeObject,
+                let code = readableObject.stringValue {
+                dismiss(animated: true)
+                delegate?.barcodeRead(barcode: code)
+                print(code)
+            }
+        }
+    }
+}
